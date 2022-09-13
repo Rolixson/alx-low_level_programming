@@ -1,14 +1,32 @@
+#include <stdio.h>
 #include "main.h"
 
-/**
-* _abs -> return absolute value of a number
-* @n: parameter
-* Return: absolute value of a number
-*/
-int _abs(int n)
-{
-	if (n < 0)
-		n = -n;
-	return (n);
-}
 
+/**
+* print_to_98 - prints to 98
+* @n: the starting point
+*/
+void print_to_98(int n)
+{
+	if (n <= 98)
+	{
+		while (n <= 98)
+		{
+			if (n == 98)
+				printf("%d\n", n);
+			else
+				printf("%d, ", n);
+			n = n + 1;
+		}
+	} else if (n > 98)
+	{
+		while (n >= 98)
+		{
+			if (n == 98)
+				printf("%d\n", n);
+			else
+				printf("%d, ", n);
+			n = n - 1;
+		}
+	}
+}
